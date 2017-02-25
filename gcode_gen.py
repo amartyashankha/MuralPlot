@@ -9,7 +9,7 @@ def pendown():
 
 def polygon_move(polygon):
     ret = []
-    ret.append(polygon[0])
+    ret.append(linear_move(polygon[0]))
     ret.append(pendown())
     for point in polygon[1:]:
         ret.append(linear_move(point))
