@@ -2,10 +2,10 @@ def linear_move(point):
     return 'G01 X'+str(point[0])+' Y'+str(point[1])
 
 def penup():
-    return 'G Z1'
+    return 'G01 Z1 F1000'
 
 def pendown():
-    return 'G Z-1'
+    return 'G01 Z-1 F1000'
 
 def polygon_move(polygon):
     ret = []

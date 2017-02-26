@@ -33,7 +33,7 @@ def scatter_my_ass(polygons):
     fig, ax = plt.subplots(figsize=(10, 10))
     ax.scatter(x_values, y_values, s=0.5)
 
-fname = '/home/ubuntu/MuralPlot/svg/brain.svg'
+fname = '/home/shankha/MuralPlot/svg/brain.svg'
 
 polygons = polygon_gen(fname)
 

@@ -18,4 +18,4 @@ from polygon_gen import scatter_my_ass
 
 from gcode_gen import polygons_move
 
-print len(polygons_move(new_polygons))
+print '\n'.join(polygons_move(new_polygons))
