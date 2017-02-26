@@ -5,7 +5,7 @@ def penup():
     return 'G Z1'
 
 def pendown():
-    return 'G Z1'
+    return 'G Z-1'
 
 def polygon_move(polygon):
     ret = []
