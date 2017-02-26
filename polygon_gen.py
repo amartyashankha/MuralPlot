@@ -26,8 +26,17 @@ def scatter_my_ass(polygons):
     y_values = []
 
     for polygon in polygons:
+        print(len(polygon))
         x_values += [point[0] for point in polygon]
         y_values += [point[1] for point in polygon]
     
     fig, ax = plt.subplots(figsize=(10, 10))
-    ax.scatter(x_values, y_values, s=0.1)
+    ax.scatter(x_values, y_values, s=0.5)
+
+fname = '/home/ubuntu/MuralPlot/svg/brain.svg'
+
+polygons = polygon_gen(fname)
+
+import pickle
+
+pickle.dump(polygons, open('polygons.pkl', 'wb'))
