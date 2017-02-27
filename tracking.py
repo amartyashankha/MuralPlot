@@ -14,14 +14,14 @@ class Tracker(object):
 
     def detect_features(self, sub_image):
         sub_image_uint8 = np.uint8(sub_image)
-        # orb = cv2.ORB_create(
-            # patchSize=128,
-            # edgeThreshold=32,
-            # WTA_K=3
-        # )
-        # kp1, des1 = orb.detectAndCompute(sub_image_uint8, None)
-        # kp2, des2 = orb.detectAndCompute(self._gray_image, None)
-
+        orb = cv2.ORB_create(
+            patchSize=128,
+            edgeThreshold=32,
+            WTA_K=3
+        )
+        kp1, des1 = orb.detectAndCompute(sub_image_uint8, None)
+        kp2, des2 = orb.detectAndCompute(self._gray_image, None)
+        '''
         feat = cv2.FeatureDetector_create("ORB")
         desc = cv2.DescriptorExtractor_create("ORB")
 
@@ -38,7 +38,7 @@ class Tracker(object):
 
         kp1, des1 = desc.compute(sub_image_uint8, kp1)
         kp2, des2 = desc.compute(self._gray_image, kp2)
-
+        '''
         return (kp1, des1, kp2, des2)
 
     def match(self, des1, des2, k=2):
