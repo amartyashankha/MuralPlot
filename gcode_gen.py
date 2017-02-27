@@ -25,5 +25,5 @@ def polygons_move(polygons, scale=1.0):
     for polygon in polygons:
         ret.append(penup())
         ret += polygon_move(polygon, scale)
-    ret += 'G01 X0 Y0 F1000'
+    ret += ['G01 X0 Y0 F1000']
     return ret

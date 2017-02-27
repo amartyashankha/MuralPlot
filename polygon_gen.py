@@ -11,7 +11,7 @@ def polygon_gen(fname, resolution=2, error=1e-6):
     
     polygons = []
     
-    for p in list(root.findall('{http://www.w3.org/2000/svg}path')):
+    for p in list(svg.findall('{http://www.w3.org/2000/svg}path')):
         path = parse_path(p.get('d'))
         num_points = int(path.length(error=error)*resolution)
         print num_points
@@ -33,7 +33,7 @@ def scatter_my_ass(polygons):
     fig, ax = plt.subplots(figsize=(10, 10))
     ax.scatter(x_values, y_values, s=0.1)
 
-fname = '/home/shankha/MuralPlot/svg/tree.svg'
+fname = '/home/shankha/MuralPlot/svg/brain.svg'
 
 polygons = polygon_gen(fname)
 
