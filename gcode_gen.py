@@ -12,7 +12,7 @@ def penup():
 def pendown():
     return 'G01 Z-1 F2000'
 
-def polygon_move(polygon, scale=1.0):
+def polygon_move(polygon, scale):
     ret = []
     ret.append(linear_move(polygon[0], scale))
     ret.append(pendown())
@@ -20,7 +20,7 @@ def polygon_move(polygon, scale=1.0):
         ret.append(linear_move(point, scale))
     return ret
 
-def polygons_move(polygons, scale=1.0):
+def polygons_move(polygons, scale):
     ret = []
     for polygon in polygons:
         ret.append(penup())

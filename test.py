@@ -41,4 +41,4 @@ from polygon_gen import scatter_my_ass
 
 from gcode_gen import polygons_move
 
-print '\n'.join(polygons_move(new_polygons, scale=0.12))
+print '\n'.join(polygons_move(new_polygons, scale=1.5))
